@@ -1,6 +1,6 @@
 # Netflix gpt 
   --we set up the project using npx create react app
-  
+  -- we can use formik for forms it helps alot .
 
 
 
