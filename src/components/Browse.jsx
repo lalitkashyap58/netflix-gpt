@@ -2,13 +2,15 @@ import Header from './Header'
 
 import MainContainer from './MainContainer';
 import SecondaryContainer from './SecondaryContainer';
-import useNowPlayingMovies from '../hooks/useNowPlayingMovies';
+import useNowPlayingMovies from '../hooks/useNowPlayingMovies copy';
+import usePopularMovies from '../hooks/usePopularMovies';
 const Browse = () => {
 
  
 
 //this is fetching the data and storing into the slice
 useNowPlayingMovies();
+usePopularMovies();
 
 
   return (
