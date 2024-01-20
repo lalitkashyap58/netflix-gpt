@@ -16,3 +16,5 @@ export const SUPPORTED_LANGUAGES = [
   { identifier: "en", name: "English" },
   { identifier: "hindi", name: "Hindi" },
 ];
+
+export const OPEN_AI_KEY="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";

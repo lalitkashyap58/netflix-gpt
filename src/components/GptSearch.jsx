@@ -11,9 +11,31 @@ const GptSearch = () => {
           src={BG_CDN_URL}
           alt="login-background"
         />
+         <img
+          src={BG_CDN_URL}
+          alt="login-background"
+        />
+         <img
+          src={BG_CDN_URL}
+          alt="login-background"
+        />
+         <img
+          src={BG_CDN_URL}
+          alt="login-background"
+        />
+         <img
+          src={BG_CDN_URL}
+          alt="login-background"
+        />
       </div>
+  
+      
       <GptSearchBar/>
       <GptMovieSuggestions/>
+
+      
+
+
     </div>
   )
 }

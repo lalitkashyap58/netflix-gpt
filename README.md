@@ -34,7 +34,15 @@
   # we can use useRef() whenever we give input and we can also have other ways of doing this.
   
 
+---- we are finding  the movies recommended by gpt----
+  # making api call from search api of tmdb
+  # we are taking 5 movies from recommendation
+  # but we are making 5 calls immediately by using map function 
+  # than it will the search function will give us promises , it will take time to resolve the promises
+  ------so there is a function called promise.all()=====> promise.all will finish when all promises get resolved.
 
+
+  # in gptSearchBar when I store gptSlice , we learnt this method how we can dispatch  an object 
 
   
 

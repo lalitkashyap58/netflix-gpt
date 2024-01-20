@@ -8,6 +8,7 @@ import { addUser } from "../utils/userSlice";
 import { LOGO, SUPPORTED_LANGUAGES } from "../utils/constants";
 import { toggleGptSearchView  } from "../utils/gptSlice";
 import {changeLanguage} from  "../utils/configSlice";
+import { clearGptMovieResults } from "../utils/gptSlice";
 const Header = () => {
   const navigate = useNavigate();
   const user = useSelector((store) => store.user);
@@ -60,6 +61,7 @@ useEffect(() => {
   //toggle gpt search button
 
   const handleGptSearchClick=()=>{
+    dispatch(clearGptMovieResults());
   dispatch(toggleGptSearchView());
   }
 
