@@ -29,6 +29,12 @@
   # Now for playing videos from TMDB API which consititutes of the keys and the trailer are taken fron the youtube so we needed embed code of the youtube.
 
 
+  # for stroing the gptsearch option we are again using redux.
+ 
+  # we can use useRef() whenever we give input and we can also have other ways of doing this.
+  
+
+
 
   
 
@@ -50,6 +56,11 @@
     -NeflixGpt
          -SearchBar
          -Movie Suggestion
+
+    -MultiLanguage Feature - languagecomponent
+                           - constants file
+                           - into redux
+                                
    
 
 
@@ -62,3 +73,6 @@
         Secondaty Container
           -Movie list*n
             - cards*n
+
+# creating multilanguage options-> using option and putting array into constants.
+    -- we are using this into our header.

@@ -5,7 +5,6 @@ import checkValidData from "../utils/validation";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../utils/firebase";
-import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
 
@@ -14,20 +13,17 @@ const Login = () => {
   const email = useRef(null);
   const password = useRef(null);
   const name = useRef(null);
-  const navigate = useNavigate();
   const dispatch = useDispatch();
   const [errorMessage, setErrorMessage] = useState(null);
 
   const handleButtonClick = () => {
     //validate the form data
     const message = checkValidData(email.current.value, password.current.value);
-    console.log(email.current.value);
-    console.log(password.current.value);
-    console.log(message);
+  
     if (message) return;
 
     //signin or sign up logic
-    console.log(isSigninForm);
+  
     if (!isSigninForm) {
       //signup logic
       createUserWithEmailAndPassword(
@@ -37,7 +33,6 @@ const Login = () => {
       )
         .then((userCredential) => {
           // Signed up
-          console.log("signup ke andar gaya");
           const user = userCredential.user;
           updateProfile(user, {
             displayName: name.current.value,
@@ -63,11 +58,9 @@ const Login = () => {
               // ...
             });
 
-          console.log(user);
           // ...
         })
         .catch((error) => {
-          console.log("nhi chal rha");
           const errorCode = error.code;
           const errorMessage = error.message;
           setErrorMessage(errorCode + "-" + errorMessage);
@@ -83,19 +76,13 @@ const Login = () => {
       )
         .then((userCredential) => {
           // Signed in
-          console.log("chal rha hai");
-          const user = userCredential.user;
          
         
           // ...
         })
-        .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
-        });
+        .catch((error) => {        });
     }
     setErrorMessage(message);
-    console.log(message);
   };
   const toggleSigninForm = () => {
     setSigninForm(!isSigninForm);
