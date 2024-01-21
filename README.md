@@ -45,7 +45,10 @@
   # in gptSearchBar when I store gptSlice , we learnt this method how we can dispatch  an object 
 
   
-
+# Memoisation - Every time my component loads the hook is called , but when my data is already there we don't need to call the api again and again , that's where the concept of memoisation came in .
+   
+# how to reduce the api bill .
+   
 
 
   # Features

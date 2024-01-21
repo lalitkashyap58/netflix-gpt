@@ -1,3 +1,4 @@
+
 export const LOGO =
   "https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png";
 export const API_OPTIONS = {
@@ -5,7 +6,7 @@ export const API_OPTIONS = {
   headers: {
     accept: "application/json",
     Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0NmJjMjIxNDg5NjAyOWU1MDc3NGI1YTljZmM5NmNhOSIsInN1YiI6IjY1YWExMmIxYzQzM2VhMDBjNTc0N2E1MyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.IU2XsEAdOmIwhyMTeC3ROOyfvjXjtXdRd4TlNSjXPqc",
+      "Bearer "+ process.env.REACT_APP_TMDB_KEY,
   },
 };
 export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500";
@@ -17,4 +18,4 @@ export const SUPPORTED_LANGUAGES = [
   { identifier: "hindi", name: "Hindi" },
 ];
 
-export const OPEN_AI_KEY="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";
+export const OPEN_AI_KEY = process.env.REACT_APP_OPENAI_KEY;

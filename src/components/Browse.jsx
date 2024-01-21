@@ -12,7 +12,7 @@ const Browse = () => {
  
 const showGptSearch=useSelector(store=>store.gpt.showGptSearch);
 
-//this is fetching the data and storing into the slice
+// !this is fetching the data and storing into the slice
 useNowPlayingMovies();
 usePopularMovies();
 

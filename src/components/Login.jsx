@@ -37,7 +37,7 @@ const Login = () => {
           updateProfile(user, {
             displayName: name.current.value,
             photoURL:
-              "https://media.licdn.com/dms/image/D4D03AQHY7ljM2kACHA/profile-displayphoto-shrink_400_400/0/1702287968351?e=1710979200&v=beta&t=avg8wqyZwRz_FhhS7i3VGrwyofmbN9vWY8xBxu-9zu0",
+              "https://www.clipartmax.com/png/small/118-1185030_shin-chan.png",
           })
             .then(() => {
               // Profile updated!
@@ -139,7 +139,7 @@ const Login = () => {
             toggleSigninForm();
           }}
         >
-          {isSigninForm
+          {!isSigninForm
             ? "Already a registered User? Sign in Now "
             : "New to Netflix ? Sign up Now"}
         </p>

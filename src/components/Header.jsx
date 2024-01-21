@@ -69,7 +69,7 @@ useEffect(() => {
  dispatch(changeLanguage(e.target.value));
   }
   return (
-    <div className="  flex justify-between absolute w-full px-8 py-2 bg-gradient-to-b from-black z-10">
+    <div className="  flex justify-between absolute w-full px-8 py-2 bg-gradient-to-b from-black z-10 bg-black sm:bg-blue-900 md:bg-green-900 flex-col md:flex-row  ">
       <img 
         className="w-44 h-auto "
         src={LOGO}
@@ -91,7 +91,7 @@ useEffect(() => {
            
              {/* select english and hindi */}
 
-          <button className="py-2  w-[80%]  px-4 m-2 mx-4 my-2 bg-purple-800 text-white rounded-corner" onClick={()=>{
+          <button className="py-2 text-center  w-[80%] px-4 m-2 mx-4 my-2 bg-purple-800 text-white rounded-corner" onClick={()=>{
             handleGptSearchClick();
           }}>{showGptSearch?"HomePage":"Gpt Search"}</button>
           <img
