@@ -89,13 +89,14 @@ const Login = () => {
   };
   return (
     <div>
-      <Header />
-      <div className="absolute">
+       <div className="absolute -z-1">
         <img
           src="https://assets.nflxext.com/ffe/siteui/vlv3/9134db96-10d6-4a64-a619-a21da22f8999/a449fabb-05e4-4c8a-b062-b0bec7d03085/IN-en-20240115-trifectadaily-perspective_alpha_website_small.jpg"
           alt="login-background"
         />
       </div>
+      <Header />
+     
       <form
         onSubmit={(e) => e.preventDefault()}
         className="w-1/3 p-12 bg-black absolute my-36 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-60 h-4/5"

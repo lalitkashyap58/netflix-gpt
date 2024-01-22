@@ -1,34 +1,32 @@
-import Header from './Header'
+import Header from "./Header";
 
-import MainContainer from './MainContainer';
-import SecondaryContainer from './SecondaryContainer';
-import useNowPlayingMovies from '../hooks/useNowPlayingMovies copy';
-import usePopularMovies from '../hooks/usePopularMovies';
-import GptSearch from './GptSearch';
-import { useSelector } from 'react-redux';
+import MainContainer from "./MainContainer";
+import SecondaryContainer from "./SecondaryContainer";
+import useNowPlayingMovies from "../hooks/useNowPlayingMovies copy";
+import usePopularMovies from "../hooks/usePopularMovies";
+import GptSearch from "./GptSearch";
+import { useSelector } from "react-redux";
 
 const Browse = () => {
+  const showGptSearch = useSelector((store) => store.gpt.showGptSearch);
 
- 
-const showGptSearch=useSelector(store=>store.gpt.showGptSearch);
-
-// !this is fetching the data and storing into the slice
-useNowPlayingMovies();
-usePopularMovies();
+  // !this is fetching the data and storing into the slice
+  
+  useNowPlayingMovies();
+  usePopularMovies();
 
 
   return (
     <div>
-      <Header/>
-      {showGptSearch?
-      
-      
-      <GptSearch/>:<>
-      
-      <MainContainer/>
-      <SecondaryContainer/>
-      </>
-}
+      <Header />
+      {showGptSearch ? (
+        <GptSearch />
+      ) : (
+        <>
+          <MainContainer />
+          <SecondaryContainer />
+        </>
+      )}
 
       {/* 
         Main Container
@@ -43,7 +41,9 @@ usePopularMovies();
        
       */}
     </div>
-  )
-}
+  );
+};
 
-export default Browse
+export default Browse;
+
+
